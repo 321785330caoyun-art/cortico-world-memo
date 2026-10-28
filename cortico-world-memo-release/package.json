@@ -1,0 +1,23 @@
+{
+  "name": "cortico-world-memo",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "记忆指路：把一堆 Markdown 笔记切成记忆块、建 IDF 共现边图、按 per-block top-K 做联想召回。只读笔记，索引是可删派生物。",
+  "author": "小鲸 & 灯塔 & 321785330caoyun-art",
+  "license": "AGPL-3.0-or-later",
+  "private": false,
+  "engines": { "node": ">=22" },
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "keywords": ["cortico-world", "cortico", "memory", "markdown", "graph", "recall"],
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "记忆指路",
+    "locales": {
+      "zh": { "displayName": "记忆指路", "description": "从 Markdown 笔记建记忆图，IDF 加权 + 每块 top-K 邻居，做联想召回。只读笔记，索引可删可重建。" },
+      "en": { "displayName": "Memo Router", "description": "Builds an IDF-weighted memory graph from Markdown notes with per-block top-K neighbors; associative recall. Read-only, disposable index." }
+    }
+  },
+  "files": ["src", "README.md"]
+}
